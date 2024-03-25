@@ -91,10 +91,38 @@ public class Main {
         while (i <= years * 12) {
             Deposit = (int) (Deposit + Deposit * percent);
             if (i % 6 == 0) {
-                System.out.println( i / 12 + " год " + i % 12 + " месяцев: cумма накопления " + Deposit);
+                System.out.println(i / 12 + " год " + i % 12 + " месяцев: cумма накопления " + Deposit);
             }
             i++;
         }
 
+
+        // Задача 7
+        System.out.println("Задача 7");
+
+        int friday = 3;
+        int day = 0;
+
+        while (day <= 31) {
+            day++;
+            if (day == friday) {
+                System.out.println("Сегодня пятница, " + day + " число. Необходимо подготовить отчет");
+                friday = friday + 7;
+            }
+        }
+
+
+        // Задача 8
+        System.out.println("Задача 8");
+
+        int yearComet = 0;
+        int yearBefore = 2024 - 200;
+        int yearAfter = 2024 + 100;
+
+        for (yearComet = yearBefore; yearComet < yearAfter; yearComet ++) {
+            if (yearComet % 79 == 0){
+                System.out.println(yearComet);
+            }
+        }
     }
 }
